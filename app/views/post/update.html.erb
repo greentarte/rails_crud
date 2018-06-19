@@ -1,0 +1,8 @@
+
+<h1>게시판</h1>
+<p>글을 수정해주세요</p>
+  <form action="/post/<%=@post.id%>/commit">
+    제목 : <input type="text" name="title" value="<%= @post.title%>"/><br /><br />
+    내용 : <textarea name="body"><%= @post.body%></textarea>
+    <input type="submit" name="뿅" />
+  </form>

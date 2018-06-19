@@ -34,4 +34,17 @@ class PostController < ApplicationController
     redirect_to '/'
   end
 
+  def update
+    @post=Post.find(params[:id])
+    # @id = post.id
+    # @title=post.title
+    # @body=post.body
+  end
+
+  def commit
+    post=Post.find(params[:id])
+    post.update(title: params[:title], body: params[:body])
+    redirect_to "/post/#{post.id}"
+  end
+
 end
