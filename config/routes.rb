@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'post/create'
   #variable routing
   get 'post/:id' => 'post#show'
+  #앞에서 주소로 들어오면 뒤에 링크로 보낸다.
+  get 'post/:id/destroy' => 'post#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
   # The priority is based upon order of creation: first created -> highest priority.

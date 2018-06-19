@@ -1,4 +1,5 @@
 class PostController < ApplicationController
+  #액션
   def index
     @posts=Post.all
   end
@@ -20,6 +21,14 @@ class PostController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+  end
+
+  def destroy
+    #view파일 없이 삭제
+    post=Post.find(params[:id])
+    post.destroy
+    #root page로 이동
+    redirect_to '/'
   end
 
 end
