@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get 'post/index'
   get 'post/new'
   get 'post/create'
-  get 'post/show'
+  #variable routing
+  get 'post/:id' => 'post#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
   # The priority is based upon order of creation: first created -> highest priority.

@@ -17,4 +17,9 @@ class PostController < ApplicationController
     # post.body = params[:body]
     # post.save
   end
+
+  def show
+    @post = Post.find(params[:id])
+  end
+
 end
