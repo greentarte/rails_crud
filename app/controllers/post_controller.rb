@@ -9,7 +9,10 @@ class PostController < ApplicationController
 
   def create
     #1.
-    Post.create(title: params[:title], body: params[:body])
+    post=Post.create(title: params[:title], body: params[:body])
+    #텍스트 안에 변수를 넣을 때 (textinterpolation)
+    # 반드시 ""로 해줘야함
+    redirect_to "/post/#{post.id}"
     #1-1
     # Post.create(:title => params[:title], :body => params[:body] )
     # #2.
